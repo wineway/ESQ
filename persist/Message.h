@@ -6,26 +6,23 @@
 #define ESQ_MESSAGE_H
 
 #include <vector>
-#include <cstddef>
-#include "Persister.h"
+#include <string>
 
 namespace esq {
     class Message {
-        static Persister persister;
     private:
         const long offset;
-        const std::vector<std::byte> &key;
-        const std::vector<std::byte> &value;
+        const std::byte* key;
+        const std::byte* value;
 
-        friend class Persister;
+        friend class Persistor;
 
 
     public:
-        explicit Message(long offset, const std::vector<std::byte> &key, const std::vector<std::byte> &value);
+        explicit Message(long offset, const std::byte* key, const std::byte* value);
 
-        void append(Message &message);
+        virtual ~Message();
 
-        void append(std::vector<Message> &messages);
     };
 
 

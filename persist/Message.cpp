@@ -2,19 +2,16 @@
 // Created by wangyuwei on 2020/7/18.
 //
 
-#include "Message.h"
+#include "persist/Message.h"
 
 namespace esq {
 
-    void esq::Message::append(Message &message) {
-
+    Message::~Message() {
+        delete [] key;
+        delete [] value;
     }
 
-    void Message::append(std::vector<Message> &messages) {
-
-    }
-
-    Message::Message(const long offset, const std::vector<std::byte> &key, const std::vector<std::byte> &value)
+    Message::Message(long offset, const std::byte* key, const std::byte* value)
             : offset(offset), key(key), value(value) {}
 
 }
