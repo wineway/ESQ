@@ -9,6 +9,7 @@ cmake-build-debug/
 CMakeCache.txt
 CMakeFiles/
 ESQ
+test
 Makefile
 .clion.source.upload.marker
 cmake_install.cmake
