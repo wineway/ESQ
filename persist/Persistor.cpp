@@ -3,10 +3,6 @@
 //
 
 #include "persist/Persistor.h"
-#include <sys/epoll.h>
-#include <fcntl.h>
-#include <cerrno>
-#include "FileName.h"
 
 void esq::Persistor::persist(esq::Message&& message) {
 }

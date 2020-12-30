@@ -6,20 +6,11 @@
 cmake-build-debug/
 .clangd/
 .project_alt.json
-CMakeCache.txt
-CMakeFiles/
-ESQ
-test
-Makefile
 .clion.source.upload.marker
-cmake_install.cmake
-compile_commands.json
-ESQ.cbp
-libESQ.a
-thirdparty/
 
 # Build directory.
 build/
 out/
 lib/
+third_party/
 
