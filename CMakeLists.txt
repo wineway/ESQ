@@ -52,5 +52,6 @@ if(ESQ_BUILD_TESTS)
     endfunction(esq_test)
 
     esq_test("persist/FileNameTest.cpp")
+    esq_test("common/RingBufferTest.cpp")
 endif(ESQ_BUILD_TESTS)
 #add_executable(test main.cpp)
